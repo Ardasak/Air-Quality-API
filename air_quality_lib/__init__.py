@@ -22,7 +22,7 @@ class air_quality_lib:
             return self.country
 
         def get_supported_countries(self, asJson = False):
-            resp = requests.get(url="http://api.airvisual.com/v2/countries?key=4732196d-a1af-40a0-af2e-023f6b625d")
+            resp = requests.get(url="http://api.airvisual.com/v2/countries?key=4732196d-a1af-40a0-af2e-023f6b6a225d")
             json_data = resp.json()
             if json_data["status"] == "success":
                 if(asJson):
