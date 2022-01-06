@@ -1,9 +1,5 @@
-from abc import ABC, abstractmethod
+import requests
 
-class State(ABC):
-    def __init__(self, state):
-        self.state = state
-        
-    @abstractmethod
-    def get_state_name(self):
-        pass
+class State():      
+    def __init__(self, key):
+        self.key = key

@@ -1,8 +1,5 @@
-from abc import ABC, abstractmethod
-class City(ABC):
-    def __init__(self, city):
-        self.city = city
+import requests
 
-    @abstractmethod
-    def get_city_name(self):
-        pass
+class City():
+    def __init__(self, key):
+        self.key = key
