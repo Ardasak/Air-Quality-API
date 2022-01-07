@@ -8,16 +8,19 @@ city_obj = air_quality_lib.City(api_key)
 state_obj = air_quality_lib.State(api_key)
 
 def test_app():
-    for func in dir(city_obj):
-        if func.startswith("get_"):
-            print(getattr(city_obj, func)())
+    # City Object Test
 
-    for func in dir(air_quality_lib.Country):
-        if func.startswith("get_"):
-            print(getattr(country_obj, func)())
+    print(city_obj.get_supported_cities("USA", "Alaska", asJson=True))
+    print(city_obj.get_supported_cities("USA", "Alaska"))
 
-    for func in dir(state_obj):
-        if func.startswith("get_"):
-            print(getattr(state_obj, func)())
+    # State Object Test
+
+    print(state_obj.get_supported_states("USA", asJson=True))
+    print(state_obj.get_supported_states("USA"))
+
+    # Country Object Test
+
+    print(country_obj.get_supported_countries(asJson=True))
+    print(country_obj.get_supported_countries())
 
 test_app()

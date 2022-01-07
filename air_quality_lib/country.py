@@ -1,7 +1,6 @@
 import requests
 from air_quality_lib import exceptions
 class Country():
-
     def __init__(self, key):
         self.key = key
 
