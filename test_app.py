@@ -1,6 +1,5 @@
 import json
 import air_quality_lib
-from air_quality_lib import city
 
 api_key = "4732196d-a1af-40a0-af2e-023f6b6a225d"
 country_obj = air_quality_lib.Country(api_key)
