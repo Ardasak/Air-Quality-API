@@ -25,6 +25,12 @@ class StateNotFound(Exception):
 class CountryNotFound(Exception):
     pass
 
+class CityNotFound(Exception):
+    pass
+
+class StationNotFound(Exception):
+    pass
+
 def check_exceptions(message: str):
     match(message):
         case "call_limit_reached":
@@ -45,4 +51,8 @@ def check_exceptions(message: str):
             raise StateNotFound("State not found. Check supported states by calling get_supported_states(country_name). This exception is also raised if the country name is wrong.")
         case "country_not_found":
             raise CountryNotFound("Country not found. Check supported countries by calling get_supported_countries().")
+        case "city_not_found":
+            raise CityNotFound("City is not found. Check supported cities by calling get_supported_cities(country_name, state_name). This exception is also raised if the state or country name is wrong.")
+        case "station_not_found":
+            raise StationNotFound("Station not found. Check supported stations by calling get_supported_stations(country_name, state_name, city_name). This exception is also raised if the city or state or country name is wrong.")
         
