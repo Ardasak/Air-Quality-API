@@ -29,7 +29,7 @@ class Station():
             return json_data
         exceptions.check_exceptions(json_data["data"]["message"])
 
-    def get_nearest_station_data_gps(latitude, longitude, beautify = False):
+    def get_nearest_station_data_gps(self, latitude, longitude, beautify = False):
         resp = requests.get(url=f"http://api.airvisual.com/v2/nearest_station?lat={latitude}&lon={longitude}&key={self.key}")
         json_data = resp.json()
         if json_data["status"] == "success":

@@ -1,4 +1,3 @@
-import json
 import air_quality_lib
 
 # Here is an example community api key
