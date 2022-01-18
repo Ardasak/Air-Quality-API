@@ -4,7 +4,7 @@ This library is developed using [AirVisualAPI](https://www.iqair.com/air-polluti
 
 To use this library, you have to make sure that you have an api key. If you don't have one, you can have it on the same link above.
 
-If you want to see API docs, visit [AirVisualAPI Docs](https://api-docs.iqair.com/?version=latest)
+If you want to see API docs, visit [AirVisualAPI Docs](https://api-docs.iqair.com/?version=latest).
 
 You can see the basic usage of the API below.
 
