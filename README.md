@@ -1,15 +1,41 @@
 # **Usage**
 
-This library is developed using [AirVisualAPI](https://www.iqair.com/air-pollution-data-api)
+This library is developed using [AirVisualAPI](https://www.iqair.com/air-pollution-data-api) and tested using Windows and Linux(Ubuntu)
 
 To use this library, you have to make sure that you have an api key. If you don't have one, you can have it on the same link above.
 
 If you want to see API docs, visit [AirVisualAPI Docs](https://api-docs.iqair.com/?version=latest)
 
+You can see the basic usage of the API below.
+
+```
+import json
+import air_quality_lib
+
+# Here is an example community api key
+api_key = "4732196d-a1af-40a0-af2e-023f6b6a225d"
+
+country_obj = air_quality_lib.Country(api_key)
+city_obj = air_quality_lib.City(api_key)
+state_obj = air_quality_lib.State(api_key)
+station_obj = air_quality_lib.Station(api_key)
+
+def test_app():
+    print(city_obj.get_supported_cities("USA", "Alaska", asJson=True))
+    print(city_obj.get_supported_cities("USA", "Alaska"))
+
+    print(state_obj.get_supported_states("USA", asJson=True))
+    print(state_obj.get_supported_states("USA"))
+
+    print(country_obj.get_supported_countries(asJson=True))
+    print(country_obj.get_supported_countries())
+
+test_app()
+```
+
 
 
 # Exceptions 
-
 * InvalidApiKey: _When the api key you logged is invalid._
 * PermissionError: _When your key does not have permission to execute that method._
 * CallLimitReached: _There is a minute/monthy limit, this exception is raised if you reach that limit._
