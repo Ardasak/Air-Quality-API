@@ -1,6 +1,6 @@
 # **Usage**
 
-This library is developed using [AirVisualAPI](https://www.iqair.com/air-pollution-data-api) and tested using Windows and Linux(Ubuntu)
+This library is developed using [AirVisualAPI](https://www.iqair.com/air-pollution-data-api) and tested using Windows and Linux(Parrot).
 
 To use this library, you have to make sure that you have an api key. If you don't have one, you can have it on the same link above.
 
